@@ -3,7 +3,7 @@
 require_once "TotalVoiceAPI.class.php";
 
 
-$api = new TotalVoice("{{access-token}}");
+$api = new TotalVoiceAPI("{{access-token}}");
 
 $api->debugOn();
 
