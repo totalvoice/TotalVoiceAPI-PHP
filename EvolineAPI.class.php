@@ -39,7 +39,7 @@ class EvolineAPI {
 		}
 
 		$ch = curl_init();
-		curl_setopt($ch, CURLOPT_URL, "https://api.evoline.com.br".$path);
+		curl_setopt($ch, CURLOPT_URL, "https://api.totalvoice.com.br".$path);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
 		//if ssl problems uncomment:
