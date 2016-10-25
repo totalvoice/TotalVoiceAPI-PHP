@@ -1,13 +1,13 @@
 <?php
 
 
-class EvolineAPI {
+class TotalVoiceAPI {
 
 	var $accessToken;
 	var $debug = false;
 	var $assoc = false;
 
-	function EvolineAPI($accessToken, $assoc=false, $debug=false) {
+	function TotalVoiceAPI($accessToken, $assoc=false, $debug=false) {
 		$this->accessToken = $accessToken;
 		$this->assoc = $assoc;
 		$this->debug = $debug;
