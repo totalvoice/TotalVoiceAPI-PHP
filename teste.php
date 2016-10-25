@@ -15,7 +15,7 @@ $api->returnAssoc();
 //print_r($api->enviaTTS("**********", "Isto é um texto falado"));
 
 
-//print_r($api->enviaAudio("**********", "http://fooooooo.bar/audio.mp3"));
+//print_r($api->enviaAudio("**********", "https://api.evoline.com.br/painel/demo-song.mp3"));
 
 
 print_r($api->enviaChamada("**********", "**********"));
