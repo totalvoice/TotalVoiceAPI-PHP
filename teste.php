@@ -1,9 +1,9 @@
 <?php 
 
-require_once "EvolineAPI.class.php";
+require_once "TotalVoiceAPI.class.php";
 
 
-$api = new EvolineAPI("{{access-token}}");
+$api = new TotalVoice("{{access-token}}");
 
 $api->debugOn();
 
