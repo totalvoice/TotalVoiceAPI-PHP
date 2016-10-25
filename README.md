@@ -1,13 +1,13 @@
-# EvolineAPI-PHP
-Lib PHP para integração com a API Evoline
+# TotalVoiceAPI-PHP
+Lib PHP para integração com a API TotalVoice
 
 ## Como utilizar (how to)
 
 ```php
 <?php 
-require_once "EvolineAPI.class.php";
+require_once "TotalVoiceAPI.class.php";
 
-$api = new EvolineAPI("{{access-token}}");
+$api = new TotalVoiceAPI("{{access-token}}");
 
 $api->debugOn(); //ativa o modo debug, printa todos os requests e responses
 
