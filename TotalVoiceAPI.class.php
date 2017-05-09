@@ -94,10 +94,11 @@ class TotalVoiceAPI {
 		return $this->sendRequest("/chamada/relatorio?data_inicio=" . $dataInicio . "&data_fim=" . $dataFim, "GET");
 	}
 	/* SMS */
-	public function enviaSMS($numero_destino, $mensagem) {
+	public function enviaSMS($numero_destino, $mensagem, $resposta_usuario=false) {
 		$body = array();
 		$body["numero_destino"] = $numero_destino;
 		$body["mensagem"] = $mensagem;
+		$body["resposta_usuario"] = $resposta_usuario;
 		return $this->sendRequest("/sms", "POST", json_encode($body));
 	}
 	public function statusSMS($smsId) {
