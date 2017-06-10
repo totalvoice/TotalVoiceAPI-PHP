@@ -116,6 +116,16 @@ class TotalVoiceAPI {
 		$body["resposta_usuario"] = $resposta_usuario;
 		return $this->sendRequest("/tts", "POST", json_encode($body));
 	}
+	
+	public function enviaComposto($numero_destino, $dados, $bina) {
+	        $body = array();
+	        $body["numero_destino"] = $numero_destino;
+	        $body["dados"] = $dados;
+	        $body["bina"] = $bina;
+	        return $this->sendRequest("/composto", "POST", json_encode($body));
+	}
+
+	
 	public function statusTTS($ttsIs) {
 		return $this->sendRequest("/tts/" . $ttsIs, "GET");
 	}
