@@ -1,6 +1,6 @@
 # TotalVoiceAPI-PHP (LEGADO)
+
 Nova Library [PHP Totalvoice](https://github.com/totalvoice/totalvoice-php)
-Lib LEGADO PHP para integração com a API TotalVoice
 
 ## Como utilizar (how to)
 
