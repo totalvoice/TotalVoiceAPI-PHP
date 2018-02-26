@@ -142,13 +142,14 @@ class TotalVoiceAPI
     }
 
     /* TTS */
-    public function enviaTTS($numeroDestino, $mensagem, $velocidade=0, $respostaUsuario=false) 
+    public function enviaTTS($numeroDestino, $mensagem, $velocidade=0, $respostaUsuario=false, $bina = null) 
     {
         $body = [];
         $body['numero_destino'] = $numeroDestino;
         $body['mensagem'] = $mensagem;
         $body['velocidade'] = $velocidade;
         $body['resposta_usuario'] = $respostaUsuario;
+        $body['bina'] = $bina;
         return $this->sendRequest('/tts', 'POST', json_encode($body));
     }
 
