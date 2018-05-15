@@ -69,7 +69,7 @@ class TotalVoiceAPI
 
     public function atualizaDadosConta($nome, $login, $senha, $cpfCnpj, $telefone) 
     {
-        $body = [];
+        $body = array();
         if ($nome) {
             $body['nome'] = $nome;
         }
@@ -91,7 +91,7 @@ class TotalVoiceAPI
     /* CHAMADA */
     public function enviaChamada($origem, $destino, $gravarAudio=false, $binaOrigem=null, $binaDestino=null) 
     {
-        $body = [];
+        $body = array();
         $body['numero_origem'] = $origem;
         $body['numero_destino'] = $destino;
         $body['gravar_audio'] = $gravarAudio;
@@ -123,7 +123,7 @@ class TotalVoiceAPI
     /* SMS */
     public function enviaSMS($numeroDestino, $mensagem, $respostaUsuario=false) 
     {
-        $body = [];
+        $body = array();
         $body['numero_destino'] = $numeroDestino;
         $body['mensagem'] = $mensagem;
         $body['resposta_usuario'] = $respostaUsuario;
@@ -144,7 +144,7 @@ class TotalVoiceAPI
     /* TTS */
     public function enviaTTS($numeroDestino, $mensagem, $velocidade=0, $respostaUsuario=false, $bina = null) 
     {
-        $body = [];
+        $body = array();
         $body['numero_destino'] = $numeroDestino;
         $body['mensagem'] = $mensagem;
         $body['velocidade'] = $velocidade;
@@ -155,7 +155,7 @@ class TotalVoiceAPI
 
     public function enviaComposto($numeroDestino, $dados, $bina) 
     {
-        $body = [];
+        $body = array();
         $body['numero_destino'] = $numeroDestino;
         $body['dados'] = $dados;
         $body['bina'] = $bina;
