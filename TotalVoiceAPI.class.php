@@ -121,12 +121,14 @@ class TotalVoiceAPI
     }
 
     /* SMS */
-    public function enviaSMS($numeroDestino, $mensagem, $respostaUsuario=false) 
+    public function enviaSMS($numeroDestino, $mensagem, $respostaUsuario=false, $multiSMS = false, $dataCriacao = null) 
     {
         $body = array();
         $body['numero_destino'] = $numeroDestino;
         $body['mensagem'] = $mensagem;
         $body['resposta_usuario'] = $respostaUsuario;
+        $body['multi_sms'] = $multiSMS;
+        $body['data_criacao'] = $dataCriacao;
         return $this->sendRequest('/sms', 'POST', json_encode($body));
     }
 
