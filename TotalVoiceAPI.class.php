@@ -194,4 +194,21 @@ class TotalVoiceAPI
     {
         return $this->sendRequest("/audio/relatorio?data_inicio=$dataInicio&data_fim=$dataFim", 'GET');
     }
+
+    /* VERIFICAÇÃO */
+    public function enviaVerificacao($numeroDestino, $nomeProduto, $tamanho = 4, $isTTS = false)
+    {
+        $body = array();
+        $body['numero_destino'] = $numeroDestino;
+        $body['nome_produto'] = $nomeProduto;
+        $body['tamanho'] = $tamanho;
+        $body['tts'] = $isTTS;
+        return $this->sendRequest('/verificacao', 'POST', json_encode($body));
+    }
+
+    /* VERIFICAÇÃO */
+    public function confirmaVerificacao($id, $pin)
+    {
+        return $this->sendRequest('/verificacao?id='.$id.'&pin='.$pin, 'GET');
+    }
 }
