@@ -211,4 +211,21 @@ class TotalVoiceAPI
     {
         return $this->sendRequest('/verificacao?id='.$id.'&pin='.$pin, 'GET');
     }
+
+    public function enviaBina($numero)
+    {
+        $body = array();
+        $body['telefone'] = $numero;
+        return $this->sendRequest('/bina', 'POST', json_encode($body));
+    }
+
+    public function validaBina($codigo, $telefone)
+    {
+        return $this->sendRequest('/bina?codigo='.$codigo.'&telefone='.$telefone, 'GET');
+    }
+
+    public function removerBina($telefone)
+    {
+        return $this->sendRequest("/bina/".$telefone, "DELETE");
+    }
 }
